@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import LiskHubExtensions from 'liskHubExtensions';
+import LiskHubExtensions from 'LiskHubExtensions';
 
 const Box = LiskHubExtensions.components.Box;
 const { moment, grid } = LiskHubExtensions.dependencies;

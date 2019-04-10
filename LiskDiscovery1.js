@@ -68,12 +68,10 @@ class ProjectTab extends Component{
     this.state = {
       projects: [],
     };
-    console.log(props);
   }
 
   componentDidMount() {
     const { accountAddress } = this.props;
-    console.log('componentDidMount', this.props);
     this.getProjects(accountAddress);
   }
 
@@ -102,6 +100,7 @@ class ProjectTab extends Component{
 
   componentWillReceiveProps(nextProps) {
     const { accountAddress } = this.props;
+    console.log('componentWillReceiveProps', this.props);
     if (accountAddress !== nextProps.accountAddress) {
       this.getProjects(nextProps.accountAddress);
     }

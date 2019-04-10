@@ -71,8 +71,8 @@ class ProjectTab extends Component{
   }
 
   componentDidMount() {
-    const { accountAddress } = this.props;
-    this.getProjects(accountAddress);
+    const { address } = this.props;
+    this.getProjects(address);
   }
 
   async getProjects(address) {
@@ -99,7 +99,6 @@ class ProjectTab extends Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    const { accountAddress } = this.props;
     console.log('componentWillReceiveProps', this.props);
     if (accountAddress !== nextProps.accountAddress) {
       this.getProjects(nextProps.accountAddress);

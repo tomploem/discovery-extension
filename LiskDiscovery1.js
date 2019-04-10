@@ -68,6 +68,7 @@ class ProjectTab extends Component{
     this.state = {
       projects: [],
     };
+    console.log('constructor', props);
   }
 
   componentDidMount() {
@@ -126,7 +127,7 @@ ProjectTab.defaultProps = {
       address: '',
     }
   },
-  accountAddress: '',
+  address: '',
   tabClassName : 'delegate-statistics',
   tabName: 'Projects'
 };

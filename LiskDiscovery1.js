@@ -68,7 +68,7 @@ class ProjectTab extends Component{
 
   componentDidMount() {
     const { address } = this.props;
-    console.log('componentDidMount', props);
+    console.log('componentDidMount', this.props);
     this.getProjects(address);
   }
 

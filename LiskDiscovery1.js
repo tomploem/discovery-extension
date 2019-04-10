@@ -71,8 +71,8 @@ class ProjectTab extends Component{
   }
 
   componentDidMount() {
-    const { delegate } = this.props;
-    this.getProjects(delegate.account.address);
+    const { accountAddress } = this.props;
+    this.getProjects(accountAddress);
   }
 
   async getProjects(address) {
@@ -99,9 +99,9 @@ class ProjectTab extends Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    const { delegate } = this.props;
-    if (delegate.address !== nextProps.delegate.address) {
-      this.getProjects(nextProps.delegate.account.address);
+    const { accountAddress } = this.props;
+    if (accountAddress !== nextProps.accountAddress) {
+      this.getProjects(nextProps.accountAddress);
     }
   }
 
@@ -127,6 +127,7 @@ ProjectTab.defaultProps = {
       address: '',
     }
   },
+  accountAddress: '',
   tabClassName : 'delegate-statistics',
   tabName: 'Projects'
 };

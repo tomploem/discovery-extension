@@ -102,6 +102,7 @@ class ProjectTab extends Component{
   }
 
   render() {
+    console.log(this.state, this.props)
     return (
       <Box>
       <header>

@@ -67,9 +67,8 @@ class ProjectTab extends Component{
   };
 
   componentDidMount() {
-    const { address } = this.props;
-    console.log('componentDidMount', this.props);
-    this.getProjects(address);
+    const { data } = this.props;
+    this.getProjects(data.address);
   }
 
   async getProjects(address) {
@@ -97,12 +96,11 @@ class ProjectTab extends Component{
 
   componentWillReceiveProps(nextProps) {
     if (this.props.address !== nextProps.address) {
-      this.getProjects(nextProps.address);
+      this.getProjects(nextProps.data.address);
     }
   }
 
   render() {
-    console.log(this.state, this.props)
     return (
       <Box>
       <header>

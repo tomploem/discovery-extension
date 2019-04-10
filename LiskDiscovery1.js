@@ -99,9 +99,8 @@ class ProjectTab extends Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', this.props);
-    if (accountAddress !== nextProps.accountAddress) {
-      this.getProjects(nextProps.accountAddress);
+    if (this.props.address !== nextProps.address) {
+      this.getProjects(nextProps.address);
     }
   }
 

@@ -62,17 +62,13 @@ const Placeholder = () => (
 );
 
 class ProjectTab extends Component{
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      projects: [],
-    };
-    console.log('constructor', props);
-  }
+  state = {
+    projects: [],
+  };
 
   componentDidMount() {
     const { address } = this.props;
+    console.log('componentDidMount', props);
     this.getProjects(address);
   }
 
